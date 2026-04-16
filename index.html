@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Vegan</title>
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    </style>
+</head>
+<body>
+ 
+<!-- IMAGE ZOOM OVERLAY -->
+<div class="img-zoom-overlay" id="zoomOverlay" onclick="closeZoom()">
+  <img id="zoomedImg" src="" alt="Zoomed">
+</div>
+ 
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <img src="css/images/loveVegan.png" alt="logo">
+     <rect width="60" height="100"/>
+      <g transform="translate(30,30)">
+        <path d="M0,-18 L10,-5 L18,5 L5,5 L0,15 L-5,5 L-18,5 L-10,-5 Z" fill="none" stroke="#8a9050" stroke-width="2"/>
+        <path d="M0,-12 L6,-2 L12,5 L2,5 L0,12 L-2,5 L-12,5 L-6,-2 Z" fill="none" stroke="#c8b080" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="4" fill="#8a9050"/>
+        <line x1="-8" y1="-8" x2="8" y2="8" stroke="#c8b080" stroke-width="1"/>
+        <line x1="8" y1="-8" x2="-8" y2="8" stroke="#c8b080" stroke-width="1"/>
+      </g>
+      <text x="30" y="55" text-anchor="middle" font-family="Raleway,sans-serif" font-size="8" font-weight="600" fill="#c8b080" letter-spacing="1">LOVE VEGAN</text>
+    </svg>
+  </div>
+  <ul class="nav-links">
+  <li><a href="#" class="active">Home</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Menu</a></li>
+  <li><a href="#">Contact Us</a></li>
+</ul>
+</nav>
+ 
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero-bg zoomable" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80" alt="Stuffed peppers hero" onclick="openZoom(this)">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-title">Get Fresh <span>Food</span></div>
+      <div class="hero-subtitle">IN easy way</div>
+      <div class="hero-buttons">
+        <a href="#" class="btn" onclick="showPage('menu')">View Menu</a>
+        <a href="#" class="btn btn-outline" onclick="showPage('contact')">Book a Table</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Welcome -->
+  <section class="welcome-section">
+    <div class="welcome-badge">Welcome to Love Vegan</div>
+    <p class="welcome-sub">Sustainable and delicious. 100% Plant-based</p>
+    <a href="#" class="btn learn-more-btn" onclick="showPage('about')">Learn More</a>
+ 
+    <!-- Featured Items -->
+    <div class="featured-grid">
+      <div class="featured-item">
+        <img src="css/images/sweet potatoe fries.jpg" alt="crispy fries">
+        <span class="item-name">Potato Wedges</span>
+        <span class="item-price">$9</span>
+      </div>
+      <div class="featured-item">
+        <img src="css/images/green pasta.jpg" alt="green pasta">
+        <span class="item-name">Green Pasta</span>
+        <span class="item-price">$8</span>
+      </div>
+      <div class="featured-item">
+        <img src="css/images/ratatouille.jpg" alt="Ratatouille" onclick="openZoom(this)">
+        <span class="item-name">Ratatouille</span>
+        <span class="item-price">$9</span>
+      </div>
+    </div>
+ 
+    <div class="view-full-menu">
+      <a href="#" class="btn" onclick="showPage('menu')">View Full Menu</a>
+    </div>
+  </section>
+ 
+  <!-- Pillars -->
+  <section class="pillars-section">
+    <ul class="pillars-list">
+      <li>100% Plant-Based</li>
+      <li>Locally Sourced</li>
+      <li>Eco-Friendly Packaging</li>
+      <li>Fresh Daily</li>
+    </ul>
+  </section>
+ 
+ 
+  <footer>
+    <span>Copyright ©</span>
+    <div class="social-icons">
+      <a href="#" class="fb">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="#" class="ig">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#fff"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
+      <a href="#" class="tk">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" fill="white"/></svg>
+      </a>
+    </div>
+  </footer>
+</div>
+ 
