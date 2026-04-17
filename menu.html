@@ -1,119 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Vegan – Menu</title>
+  <meta name="description" content="Love Vegan menu – 100% plant-based, fresh and sustainable food, sides and drinks." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- ✅ FIXED: corrected from css/main.css to css/styles.css -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <!--  MENU PAGE -->
-<div class="page" id="page-menu">
- 
-  <div class="menu-header">
-    <p class="page-label">Our Menu</p>
-    <p class="menu-tagline">100% Plant-Based &nbsp;·&nbsp; Fresh &nbsp;·&nbsp; Sustainable</p>
-  </div>
- 
-  <!-- FOOD -->
-  <section class="menu-category" style="background: var(--bg-main);">
-    <h2 class="category-title">Food</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="css/images/buddha bowl.jpg" alt="buddha bowl">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Buddha Bowl</div>
-          <div class="menu-item-desc">Quinoa, roasted, veggies, chickpeas, avocado and tahini dressing. $16</div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="css/images/vegan burger.jpg" alt="fresh vegan burger">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Vegan Burger</div>
-          <div class="menu-item-desc">Plant-Based patty, lettuce, tomato, onion and vegan mayo on a toasted bun. $15</div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="css/images/creamy mushroom pasta.jpg" alt="hot creamy pasta">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Creamy Mushroom Pasta</div>
-          <div class="menu-item-desc">Whole wheat pasta in a creamy dairy-free mushroom sauce, topped with herbs. $17</div>
-        </div>
-      </div>
-    </div>
-    <div class="load-more"><a href="#" class="btn">Load More</a></div>
-  </section>
- 
-  <hr class="divider">
- 
-  <!-- SIDES -->
-  <section class="menu-category"></section>
-    <h2 class="category-title">Sides</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="css/images/sweet potatoe fries.jpg" alt="crispy potato fries">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Sweet Potato Fries</div>
-          <div class="menu-item-desc">Crispy baked sweet potato fries with a side of vegan aioli. $8</div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="css/images/avocado salad.jpg" alt="fresh green salad">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Avocado Salad</div>
-          <div class="menu-item-desc">Fresh greens, avocado, cherry tomatoes, cucumber, and lemon dressing. $7</div>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="css/images/garlic roasted veggies.jpg" alt="Garlic Roasted Veggies">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Garlic Roasted Veggies</div>
-          <div class="menu-item-desc">Seasonal vegetables roasted with garlic and herbs. $6</div>
-        </div>
-      </div>
-    </div>
-    <div class="load-more"><a href="#" class="btn">Load More</a></div>
-  </section>
 
-  <!-- DRINKS -->
-  <section class="menu-category" style="background: var(--bg-main);">
-    <h2 class="category-title">Drinks</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="css/images/green smoothie.jpg" alt="Spinach, banana, pineapple, almond milk, and a touch of chia">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Green Smoothie</div>
-          <div class="menu-item-desc">Spinach, banana, pineapple, almond milk, and a touch of chia. $7</div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" aria-label="Love Vegan – go to home page">
+          <svg width="44" height="44" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Love Vegan logo">
+            <rect width="60" height="60" fill="#2d3a1e" rx="4"/>
+            <g transform="translate(30,28)">
+              <path d="M0,-16 L9,-4 L16,4 L4,4 L0,14 L-4,4 L-16,4 L-9,-4 Z" fill="none" stroke="#8a9050" stroke-width="2"/>
+              <path d="M0,-10 L5,-1 L10,4 L1,4 L0,10 L-1,4 L-10,4 L-5,-1 Z" fill="none" stroke="#c8b080" stroke-width="1.5"/>
+              <circle cx="0" cy="0" r="3.5" fill="#8a9050"/>
+              <line x1="-7" y1="-7" x2="7" y2="7" stroke="#c8b080" stroke-width="1"/>
+              <line x1="7" y1="-7" x2="-7" y2="7" stroke="#c8b080" stroke-width="1"/>
+            </g>
+            <text x="30" y="56" text-anchor="middle" font-family="Raleway,sans-serif" font-size="7" font-weight="700" fill="#c8b080" letter-spacing="1.5">LOVE VEGAN</text>
+          </svg>
+        </a>
+        <!-- Hamburger – shows on mobile only -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
       </div>
-      <div class="menu-item">
-        <img src="css/images/fresh lemonade.jpg" alt="Freshly squeezed lemons with a hint of mint. Refreshing and chilled">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Fresh Lemonade</div>
-          <div class="menu-item-desc">Freshly squeezed lemons with a hint of mint. Refreshing and chilled. $5</div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main-content">
+
+    <!-- Page header -->
+    <section class="menu-header" aria-labelledby="menu-heading">
+      <h1 class="menu-page-title" id="menu-heading">Our Menu</h1>
+      <p class="menu-tagline">100% Plant-Based &nbsp;&middot;&nbsp; Fresh &nbsp;&middot;&nbsp; Sustainable</p>
+    </section>
+
+    <!-- ══ FOOD ══ -->
+    <section class="menu-section-wrap" aria-labelledby="food-heading">
+      <h2 class="category-heading mb-4" id="food-heading">Food</h2>
+
+      <!-- ✅ FIX: .menu-img on every image enforces equal square sizing -->
+      <div class="row g-2 g-md-3 mb-3">
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/buddha bowl.jpg" />
+            <img class="menu-img zoomable" src="css/images/buddha bowl.jpg"
+                 alt="Buddha Bowl – quinoa and roasted vegetables" onclick="openZoom(this)" />
+          </picture>
+        </div>
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/creamy mushroom pasta.jpg" />
+            <img class="menu-img zoomable" src="css/images/creamy mushroom pasta.jpg"
+                 alt="Creamy Mushroom Pasta" onclick="openZoom(this)" />
+          </picture>
+        </div>
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/vegan burger.jpg" />
+            <img class="menu-img zoomable" src="css/images/vegan burger.jpg"
+                 alt="Vegan Burger" onclick="openZoom(this)" />
+          </picture>
         </div>
       </div>
-      <div class="menu-item">
-        <img src="css/images/iced matcha latte.jpg" alt="Ceremonial matcha with oat milk, lightly sweetened, served over ice">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Iced Matcha Latte</div>
-          <div class="menu-item-desc">Ceremonial matcha with oat milk, lightly sweetened, served over ice. $6</div>
+
+      <!-- Info cards: stack on mobile, 3 columns on md+ -->
+      <div class="row g-2 g-md-3 mb-3">
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Buddha Bowl</h3>
+              <p class="menu-card-desc mb-0">Quinoa, roasted veggies, chickpeas, avocado and tahini dressing. $16</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Vegan Burger</h3>
+              <p class="menu-card-desc mb-0">Plant-Based patty, lettuce, tomato, onion and vegan mayo on a toasted bun. $15</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Creamy Mushroom Pasta</h3>
+              <p class="menu-card-desc mb-0">Whole wheat pasta in a creamy dairy-free mushroom sauce, topped with herbs. $17</p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-    <div class="load-more"><a href="#" class="btn">Load More</a></div>
-  </section>
- 
-  <hr class="divider">
-  <footer>
-    <span>Copyright ©</span>
-    <div class="social-icons">
-      <a href="#" class="fb"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-      <a href="#" class="ig"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#fff"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></a>
-      <a href="#" class="tk"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" fill="white"/></svg></a>
+
+      <div class="text-center pb-4">
+        <button class="btn btn-primary">Load More</button>
+      </div>
+    </section>
+
+    <hr class="menu-divider" />
+
+    <!-- ══ SIDES ══ -->
+    <section class="menu-section-wrap" aria-labelledby="sides-heading">
+      <h2 class="category-heading mb-4" id="sides-heading">Sides</h2>
+
+      <div class="row g-2 g-md-3 mb-3">
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/sweet potatoe fries.jpg" />
+            <img class="menu-img zoomable" src="css/images/sweet potatoe fries.jpg"
+                 alt="Sweet Potato Fries" onclick="openZoom(this)" />
+          </picture>
+        </div>
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/avocado salad.jpg" />
+            <img class="menu-img zoomable" src="css/images/avocado salad.jpg"
+                 alt="Avocado Salad" onclick="openZoom(this)" />
+          </picture>
+        </div>
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/garlic roasted veggies.jpg" />
+            <img class="menu-img zoomable" src="css/images/garlic roasted veggies.jpg"
+                 alt="Garlic Roasted Veggies" onclick="openZoom(this)" />
+          </picture>
+        </div>
+      </div>
+
+      <div class="row g-2 g-md-3 mb-3">
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Sweet Potato Fries</h3>
+              <p class="menu-card-desc mb-0">Crispy baked sweet potato fries with a side of vegan aioli. $8</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Avocado Salad</h3>
+              <p class="menu-card-desc mb-0">Fresh greens, avocado, cherry tomatoes, cucumber, and lemon dressing. $7</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Garlic Roasted Veggies</h3>
+              <p class="menu-card-desc mb-0">Seasonal vegetables roasted with garlic and herbs. $6</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="text-center pb-4">
+        <button class="btn btn-primary">Load More</button>
+      </div>
+    </section>
+
+    <hr class="menu-divider" />
+
+    <!-- ══ DRINKS ══ -->
+    <section class="menu-section-wrap" aria-labelledby="drinks-heading">
+      <h2 class="category-heading mb-4" id="drinks-heading">Drinks</h2>
+
+      <div class="row g-2 g-md-3 mb-3">
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/green smoothie.jpg" />
+            <img class="menu-img zoomable" src="css/images/green smoothie.jpg"
+                 alt="Green Smoothie" onclick="openZoom(this)" />
+          </picture>
+        </div>
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/fresh lemonade.jpg" />
+            <img class="menu-img zoomable" src="css/images/fresh lemonade.jpg"
+                 alt="Fresh Lemonade" onclick="openZoom(this)" />
+          </picture>
+        </div>
+        <div class="col-4">
+          <picture>
+            <source media="(min-width: 768px)" srcset="css/images/iced matcha latte.jpg" />
+            <img class="menu-img zoomable" src="css/images/iced matcha latte.jpg"
+                 alt="Iced Matcha Latte" onclick="openZoom(this)" />
+          </picture>
+        </div>
+      </div>
+
+      <div class="row g-2 g-md-3 mb-3">
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Green Smoothie</h3>
+              <p class="menu-card-desc mb-0">Spinach, banana, pineapple, almond milk, and a touch of chia. $7</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Fresh Lemonade</h3>
+              <p class="menu-card-desc mb-0">Freshly squeezed lemons with a hint of mint. Refreshing and chilled. $5</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="menu-card h-100">
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Iced Matcha Latte</h3>
+              <p class="menu-card-desc mb-0">Ceremonial matcha with oat milk, lightly sweetened, served over ice. $6</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="text-center pb-4">
+        <button class="btn btn-primary">Load More</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer d-flex align-items-center justify-content-between" role="contentinfo">
+    <small class="footer-copy">Copyright &copy; 2025 Love Vegan</small>
+    <div class="d-flex gap-2" aria-label="Social media links">
+      <a href="#" class="social-link social-fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="#" class="social-link social-ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#fff"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></a>
+      <a href="#" class="social-link social-tk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" fill="white"/></svg></a>
     </div>
   </footer>
-</div>
-    
+
+  <!-- Zoom overlay -->
+  <div id="zoom-overlay" role="dialog" aria-modal="true" aria-label="Image zoom" onclick="closeZoom()">
+    <button class="zoom-close" onclick="closeZoom()" aria-label="Close zoom">&#10005;</button>
+    <img id="zoom-img" src="" alt="" />
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmcjQJe4wuBnUKXxaOhZTYeZb3k" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

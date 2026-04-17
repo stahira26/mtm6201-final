@@ -1,115 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love Vegan</title>
-<link rel="stylesheet" href="css/main.css">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Vegan – Home</title>
+  <meta name="description" content="Love Vegan – 100% plant-based, locally sourced, fresh daily restaurant." />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Animate.css (extra CSS library as required) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
- 
-<!-- IMAGE ZOOM OVERLAY -->
-<div class="img-zoom-overlay" id="zoomOverlay" onclick="closeZoom()">
-  <img id="zoomedImg" src="" alt="Zoomed">
-</div>
- 
-<!-- NAVBAR -->
-<nav>
-  <div class="nav-logo">
-    <img src="css/images/loveVegan.png" alt="logo">
-     <rect width="60" height="100"/>
-      <g transform="translate(30,30)">
-        <path d="M0,-18 L10,-5 L18,5 L5,5 L0,15 L-5,5 L-18,5 L-10,-5 Z" fill="none" stroke="#8a9050" stroke-width="2"/>
-        <path d="M0,-12 L6,-2 L12,5 L2,5 L0,12 L-2,5 L-12,5 L-6,-2 Z" fill="none" stroke="#c8b080" stroke-width="1.5"/>
-        <circle cx="0" cy="0" r="4" fill="#8a9050"/>
-        <line x1="-8" y1="-8" x2="8" y2="8" stroke="#c8b080" stroke-width="1"/>
-        <line x1="8" y1="-8" x2="-8" y2="8" stroke="#c8b080" stroke-width="1"/>
-      </g>
-      <text x="30" y="55" text-anchor="middle" font-family="Raleway,sans-serif" font-size="8" font-weight="600" fill="#c8b080" letter-spacing="1">LOVE VEGAN</text>
-    </svg>
-  </div>
-  <ul class="nav-links">
-  <li><a href="#" class="active">Home</a></li>
-  <li><a href="#">About Us</a></li>
-  <li><a href="#">Menu</a></li>
-  <li><a href="#">Contact Us</a></li>
-</ul>
-</nav>
- 
-<!-- HOME PAGE -->
-<div class="page active" id="page-home">
- 
-  <!-- Hero -->
-  <section class="hero">
-    <img class="hero-bg zoomable" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80" alt="Stuffed peppers hero" onclick="openZoom(this)">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-title">Get Fresh <span>Food</span></div>
-      <div class="hero-subtitle">IN easy way</div>
-      <div class="hero-buttons">
-        <a href="#" class="btn" onclick="showPage('menu')">View Menu</a>
-        <a href="#" class="btn btn-outline" onclick="showPage('contact')">Book a Table</a>
+
+  <!-- Skip link (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--  NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html" aria-label="Love Vegan – go to home page">
+          <svg width="44" height="44" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Love Vegan logo">
+            <rect width="60" height="60" fill="#2d3a1e" rx="4"/>
+            <g transform="translate(30,28)">
+              <path d="M0,-16 L9,-4 L16,4 L4,4 L0,14 L-4,4 L-16,4 L-9,-4 Z" fill="none" stroke="#8a9050" stroke-width="2"/>
+              <path d="M0,-10 L5,-1 L10,4 L1,4 L0,10 L-1,4 L-10,4 L-5,-1 Z" fill="none" stroke="#c8b080" stroke-width="1.5"/>
+              <circle cx="0" cy="0" r="3.5" fill="#8a9050"/>
+              <line x1="-7" y1="-7" x2="7" y2="7" stroke="#c8b080" stroke-width="1"/>
+              <line x1="7" y1="-7" x2="-7" y2="7" stroke="#c8b080" stroke-width="1"/>
+            </g>
+            <text x="30" y="56" text-anchor="middle" font-family="Raleway,sans-serif" font-size="7" font-weight="700" fill="#c8b080" letter-spacing="1.5">LOVE VEGAN</text>
+          </svg>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
       </div>
-    </div>
-  </section>
- 
-  <!-- Welcome -->
-  <section class="welcome-section">
-    <div class="welcome-badge">Welcome to Love Vegan</div>
-    <p class="welcome-sub">Sustainable and delicious. 100% Plant-based</p>
-    <a href="#" class="btn learn-more-btn" onclick="showPage('about')">Learn More</a>
- 
-    <!-- Featured Items -->
-    <div class="featured-grid">
-      <div class="featured-item">
-        <img src="css/images/sweet potatoe fries.jpg" alt="crispy fries">
-        <span class="item-name">Potato Wedges</span>
-        <span class="item-price">$9</span>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero-section" aria-label="Hero banner">
+      <picture>
+        <source media="(min-width: 992px)"
+                srcset="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1400&q=85" />
+        <source media="(min-width: 576px)"
+                srcset="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=80" />
+        <img class="hero-bg zoomable"
+             src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=75"
+             alt="Stuffed peppers – fresh vegan food"
+             onclick="openZoom(this)" />
+      </picture>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content animate__animated animate__fadeIn">
+        <h1 class="hero-title">Get Fresh <span class="hero-accent">Food</span></h1>
+        <p class="hero-subtitle">IN easy way</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="menu.html"    class="btn btn-primary">View Menu</a>
+          <a href="contact.html" class="btn btn-outline-light">Book a Table</a>
+        </div>
       </div>
-      <div class="featured-item">
-        <img src="css/images/green pasta.jpg" alt="green pasta">
-        <span class="item-name">Green Pasta</span>
-        <span class="item-price">$8</span>
+    </section>
+
+    <!-- ── WELCOME ── -->
+    <section class="welcome-section" aria-labelledby="welcome-heading">
+      <div class="welcome-badge" id="welcome-heading">Welcome to Love Vegan</div>
+      <p class="welcome-sub">Sustainable and delicious. 100% Plant-based</p>
+      <a href="about.html" class="btn btn-primary">Learn More</a>
+    </section>
+
+    <!-- ── FEATURED ITEMS ── -->
+    <section class="featured-section" aria-label="Featured menu items">
+      <div class="container-fluid px-2 px-md-4">
+        <div class="row g-2 g-md-3 mb-3">
+
+          <div class="col-4">
+            <div class="featured-item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" />
+                <img src="css/images/sweet potatoe fries.jpg" alt=""> 
+              </picture>
+              <span class="featured-name">Potato Wedges</span>
+              <span class="featured-price">$9</span>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="featured-item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" />
+                <img src="css/images/green pasta.jpg" alt="pasta">
+              </picture>
+              <span class="featured-name">Green Pasta</span>
+              <span class="featured-price">$8</span>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="featured-item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?w=400&q=80" />
+                <img src="css/images/ratatouille.jpg" alt="fresh ratatouille">
+              </picture>
+              <span class="featured-name">Ratatouille</span>
+              <span class="featured-price">$9</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center">
+          <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+        </div>
       </div>
-      <div class="featured-item">
-        <img src="css/images/ratatouille.jpg" alt="Ratatouille" onclick="openZoom(this)">
-        <span class="item-name">Ratatouille</span>
-        <span class="item-price">$9</span>
+    </section>
+
+    <!-- ── PILLARS ── -->
+    <section class="pillars-section" aria-label="Our values">
+      <div class="container">
+        <div class="row justify-content-center g-2">
+          <div class="col-12 col-sm-6 col-lg-3"><p class="pillar-item">100% Plant-Based</p></div>
+          <div class="col-12 col-sm-6 col-lg-3"><p class="pillar-item">Locally Sourced</p></div>
+          <div class="col-12 col-sm-6 col-lg-3"><p class="pillar-item">Eco-Friendly Packaging</p></div>
+          <div class="col-12 col-sm-6 col-lg-3"><p class="pillar-item">Fresh Daily</p></div>
+        </div>
       </div>
-    </div>
- 
-    <div class="view-full-menu">
-      <a href="#" class="btn" onclick="showPage('menu')">View Full Menu</a>
-    </div>
-  </section>
- 
-  <!-- Pillars -->
-  <section class="pillars-section">
-    <ul class="pillars-list">
-      <li>100% Plant-Based</li>
-      <li>Locally Sourced</li>
-      <li>Eco-Friendly Packaging</li>
-      <li>Fresh Daily</li>
-    </ul>
-  </section>
- 
- 
-  <footer>
-    <span>Copyright ©</span>
-    <div class="social-icons">
-      <a href="#" class="fb">
-        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-      </a>
-      <a href="#" class="ig">
-        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#fff"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-      </a>
-      <a href="#" class="tk">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" fill="white"/></svg>
-      </a>
+    </section>
+
+    <!-- ── REVIEWS ── -->
+    <section class="reviews-section" aria-label="Customer reviews">
+      <picture>
+        <source media="(min-width: 992px)" srcset="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=1400&q=85" />
+        <img class="reviews-bg zoomable"
+             src="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=700&q=80"
+             alt="Roasted cauliflower dish"
+             onclick="openZoom(this)" />
+      </picture>
+      <div class="reviews-overlay" aria-hidden="true"></div>
+      <div class="reviews-content container">
+        <a href="#" class="btn btn-primary mb-3">Read More Reviews</a>
+        <blockquote class="review-quote">&ldquo;Best vegan food I&rsquo;ve ever had.&rdquo;</blockquote>
+        <blockquote class="review-quote">&ldquo;Amazing flavors and lovely atmosphere.&rdquo;</blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER-->
+  <footer class="site-footer d-flex align-items-center justify-content-between" role="contentinfo">
+    <small class="footer-copy">Copyright &copy; 2025 Love Vegan</small>
+    <div class="d-flex gap-2" aria-label="Social media links">
+      <a href="#" class="social-link social-fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="#" class="social-link social-ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#fff"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></a>
+      <a href="#" class="social-link social-tk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" fill="white"/></svg></a>
     </div>
   </footer>
-</div>
- 
+
+  <!-- Zoom Overlay -->
+  <div id="zoom-overlay" role="dialog" aria-modal="true" aria-label="Image zoom" onclick="closeZoom()">
+    <button class="zoom-close" onclick="closeZoom()" aria-label="Close zoom">&#10005;</button>
+    <img id="zoom-img" src="" alt="" />
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmcjQJe4wuBnUKXxaOhZTYeZb3k" crossorigin="anonymous"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
